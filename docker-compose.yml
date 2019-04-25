@@ -1,0 +1,10 @@
+version: "3"
+services:
+    meaninglessness-downloader:
+        image: meaninglessness-downloader
+        container_name: meaninglessness-downloader
+        volumes:
+            - ./Download:/usr/src/app/Download
+        restart: unless-stopped
+        ports:
+            - 8080:8888
